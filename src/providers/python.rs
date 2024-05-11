@@ -351,6 +351,7 @@ impl PythonProvider {
 
         // Match major and minor versions
         match python_version {
+            ("3", "12") => Ok(Pkg::new("python312")),
             ("3", "11") => Ok(Pkg::new("python311")),
             ("3", "10") => Ok(Pkg::new("python310")),
             ("3", "9") => Ok(Pkg::new("python39")),
